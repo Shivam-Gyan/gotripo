@@ -95,15 +95,15 @@ def compare_flight_prices(destination: str) -> str:
 
     result = f"""Flight Price Comparison to {destination}:
 
-💰 CHEAPEST OPTION:
+    CHEAPEST OPTION:
    {cheapest['airline']} {cheapest['flight_number']} - ${cheapest['price']}
    {cheapest['duration']} | {'Direct' if cheapest['stops'] == 0 else f"{cheapest['stops']} stop(s)"}
 
-⭐ BEST VALUE (Direct):
+    BEST VALUE (Direct):
    {best_value['airline']} {best_value['flight_number']} - ${best_value['price']}
    {best_value['duration']} | Direct flight
 
-📊 Price Range: ${sorted_flights[0]['price']} - ${sorted_flights[-1]['price']}
+    Price Range: ${sorted_flights[0]['price']} - ${sorted_flights[-1]['price']}
 """
     
     return result
