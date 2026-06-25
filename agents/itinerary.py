@@ -58,7 +58,7 @@ def create_daily_schedule(
         result += f"⏱️ {time_slots[slot_index]}: {activity}\n"
 
         slot_index += 1
-        if slot_index >= len(time_slots):
+        if slot_index >= slots_per_day:
             result += "\n"
             slot_index = 0
             day += 1
